@@ -32,7 +32,8 @@ module "sns" {
 
 
 module "asg" {
-  source                  = "../../modules/asg"
+  #source                  = "../"
+  source                  = "github.com/imranfawan/terraform-asg?ref=v1.0"
   node_name_prefix        = var.node_name_prefix
   image_id                = var.image_id
   ssh_source_ip           = var.ssh_source_ip
