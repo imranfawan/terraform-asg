@@ -89,14 +89,14 @@ Note that the values are passsed in from the 'terraform.tfvars' file
 
 the bucket name / key to store the state
 
-(3) Some values passed into the ASG module can be sensitive such as the ssh key name and source IP address. In `terraform-scripts/provider/asg/terraform.tfvars` specify values as desired with the following as mandatory:
+(3) Some values passed into the ASG module can be sensitive such as the ssh key name and source IP address. In `example/terraform.tfvars` specify values as desired with the following as mandatory:
 
 ```bash
 ssh_source_ip = "<SOURCE_IP>"
 key_name     = "<KEY_PAIR_NAME>" # key pair in aws to connect to the instances if required
 ```
 
-(4) From the `terraform-scripts/provider/asg` folder run the following commands
+(4) From the `example` folder run the following commands
 
 (5) `terraform init`
 
@@ -105,7 +105,7 @@ This will install the modules and aws plugins
 (6) `terraform apply`
 
 Note: The above usage will deploy the ASG to the newly created subnets. To deploy to existing subnets, comment out the `vpc module` block in the 
-`terraform-scripts/provider/asg/main.tf` file and hard-code the subnet IDs to the `vpc_zone_identifier` as follows:
+`example/main.tf` file and hard-code the subnet IDs to the `vpc_zone_identifier` as follows:
 
 `vpc_zone_identifier  = ["<SUBNET_ID_1>","<SUBNET_ID_1>"]`
 
