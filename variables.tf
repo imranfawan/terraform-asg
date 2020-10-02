@@ -1,0 +1,12 @@
+variable "vpc_id" {}
+variable "availability_zones" {}
+variable "vpc_zone_identifier" {}
+variable "min_size" {}
+variable "desired_capacity" {}
+variable "max_size" {}
+variable "image_id" {}
+variable "key_name" {}
+variable "ssh_source_ip" {}
+variable "node_name_prefix" {}
+variable "notification_target_arn" {}
+variable "role_arn" {}
